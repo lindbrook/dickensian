@@ -1,0 +1,14 @@
+Package: dickensian
+Type: Package
+Title: Text Mining the works of Charles Dickens
+Version: 0.0.9000
+Authors@R: person("lindbrook", email = "lindbrook@gmail.com",
+    role = c("aut", "cre"))
+Description: Text mine the works of Charles Dickens.
+License: GPL (>= 2)
+Imports: quanteda,
+         readtext,
+         stringi
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
