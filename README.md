@@ -1,2 +1,2 @@
-# dickensian
-# dickensian
+dickensian: concordance and text mining
+------------------------------------------------------------------------
