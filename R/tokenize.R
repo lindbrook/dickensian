@@ -20,24 +20,24 @@ sketchesByBoz <- function() {
 
 #' Tokenize book by character.
 #'
-#' tokenize by character
-#' @param book. a quanteda object.
+#' Tokenize by character.
+#' @param x A quanteda object.
 #' @return quanteda object
 #' @import quanteda
 #' @import stringi
 #' @export
-tokenize <- function(book) {
-  tokens(char_tolower(book))
+tokenize <- function(x) {
+  tokens(char_tolower(x))
 }
 
 #' Tokenize book by word.
 #'
-#' tokenize by word.
-#' @param book. quanteda object
+#' Tokenize by word.
+#' @param x A quanteda object.
 #' @return quanteda object
 #' @import quanteda
 #' @import stringi
 #' @export
-tokenWords <- function(book) {
-  as.character(tokens(char_tolower(book), remove_punct = TRUE))
+tokenWords <- function(x) {
+  as.character(tokens(char_tolower(x), remove_punct = TRUE))
 }

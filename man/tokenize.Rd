@@ -4,14 +4,14 @@
 \alias{tokenize}
 \title{Tokenize book by character.}
 \usage{
-tokenize(book)
+tokenize(x)
 }
 \arguments{
-\item{book.}{a quanteda object.}
+\item{x}{A quanteda object.}
 }
 \value{
 quanteda object
 }
 \description{
-tokenize by character
+Tokenize by character.
 }
