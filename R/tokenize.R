@@ -5,6 +5,7 @@
 #' @import quanteda
 #' @import stringi
 #' @export
+
 sketchesByBoz <- function() {
   url <- "http://www.gutenberg.org/files/882/882-0.txt"
   data_character <- texts(readtext::readtext(url))
@@ -13,8 +14,6 @@ sketchesByBoz <- function() {
   txt.stop <- "pleasure"
   start <- stri_locate_first_fixed(data_character, txt.start)[, "start"]
   end <- stri_locate_last_fixed(data_character, txt.stop)[, "start"]
-  # kwic(data_char, txt.start)
-  # kwic(data_char, txt.stop)
   stri_sub(data_character, start, end)
 }
 
@@ -26,6 +25,7 @@ sketchesByBoz <- function() {
 #' @import quanteda
 #' @import stringi
 #' @export
+
 tokenize <- function(x) {
   tokens(char_tolower(x))
 }
@@ -38,6 +38,7 @@ tokenize <- function(x) {
 #' @import quanteda
 #' @import stringi
 #' @export
+
 tokenWords <- function(x) {
   as.character(tokens(char_tolower(x), remove_punct = TRUE))
 }
