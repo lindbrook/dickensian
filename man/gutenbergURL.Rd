@@ -9,6 +9,9 @@ gutenbergURL(id)
 \arguments{
 \item{id}{Numeric. Gutenberg ID of work.}
 }
+\value{
+Character. URL as text string.
+}
 \description{
 Get URL for download.
 }

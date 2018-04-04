@@ -2,7 +2,7 @@
 #'
 #' Get URL for download.
 #' @param id Numeric. Gutenberg ID of work.
-#' @return
+#' @return Character. URL as text string.
 #' @export
 
 gutenbergURL <-  function(id) {
