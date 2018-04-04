@@ -1,14 +1,17 @@
 Package: dickensian
 Type: Package
-Title: Text Mining the works of Charles Dickens
-Version: 0.0.9000
+Title: A Concordance of the Works of Charles Dickens
+Version: 0.0.9001
+Date: 2018-04-04
 Authors@R: person("lindbrook", email = "lindbrook@gmail.com",
     role = c("aut", "cre"))
-Description: Text mine the works of Charles Dickens.
+Description: Find words and terms in Dickens's corpus.
+URL: https://github.com/lindbrook/dickensian
 License: GPL (>= 2)
 Imports: quanteda,
          readtext,
          stringi
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10)
 RoxygenNote: 6.0.1
