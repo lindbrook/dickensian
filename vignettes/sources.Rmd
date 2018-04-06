@@ -1,0 +1,20 @@
+---
+title: "Sources"
+author: "lindbrook"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Sources}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+Liza Picard. 2005. _Victorian London: The Tale of a City 1840-1870_. New York: St. Martin's Griffin.
+
+Paul Schlike, ed. 1999. _Oxford Reader's Companion to Charles Dickens_. Oxford: Oxford University Press.
