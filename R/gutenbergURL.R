@@ -10,7 +10,7 @@ gutenbergURL <-  function(id) {
     stop('"id" must be numeric')
   }
 
-  if (dickensian::dickens.utf[dickensian::dickens.utf$ID == id, "utf8"]) {
+  if (dickensian::bibliography[dickensian::bibliography$ID == id, "utf8"]) {
     paste0("http://www.gutenberg.org/ebooks/", id, ".txt.utf-8")
   } else {
     paste0("http://www.gutenberg.org/files/", id, "/", id, "-0.txt")
