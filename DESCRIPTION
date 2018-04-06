@@ -2,7 +2,7 @@ Package: dickensian
 Type: Package
 Title: A Concordance of the Works of Charles Dickens
 Version: 0.0.9001
-Date: 2018-04-04
+Date: 2018-04-06
 Authors@R: person("lindbrook", email = "lindbrook@gmail.com",
     role = c("aut", "cre"))
 Description: Find words and terms in Dickens's corpus.
@@ -14,4 +14,6 @@ Imports: quanteda,
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
+Suggests: knitr
+VignetteBuilder: knitr
 RoxygenNote: 6.0.1
