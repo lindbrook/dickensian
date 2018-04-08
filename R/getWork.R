@@ -1,3 +1,22 @@
+#' Gutenberg URL
+#'
+#' Get URL for download.
+#' @param id Numeric. Gutenberg ID of work.
+#' @return Character. URL as text string.
+#' @export
+
+gutenbergURL <- function(id) {
+  if (is.numeric(id) == FALSE) {
+    stop('"id" must be numeric')
+  }
+
+  if (dickensian::bibliography[dickensian::bibliography$ID == id, "utf8"]) {
+    paste0("http://www.gutenberg.org/ebooks/", id, ".txt.utf-8")
+  } else {
+    paste0("http://www.gutenberg.org/files/", id, "/", id, "-0.txt")
+  }
+}
+
 #' Get Work.
 #'
 #' Fetch work" from gutenberg.org for 'qunateda'.
@@ -9,6 +28,9 @@
 #' @examples
 #' # A Christmas Carol:
 #' getWork(46, "PREFACE", "One")
+#'
+#' # A Tale of Two Cities:
+#' getWork(98, "CONTENTS", "known")
 
 getWork <- function(id, first, last) {
   url <- dickensian::gutenbergURL(id)

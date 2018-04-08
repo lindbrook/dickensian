@@ -22,4 +22,7 @@ Fetch work" from gutenberg.org for 'qunateda'.
 \examples{
 # A Christmas Carol:
 getWork(46, "PREFACE", "One")
+
+# A Tale of Two Cities:
+getWork(98, "CONTENTS", "known")
 }
