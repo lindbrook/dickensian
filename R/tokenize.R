@@ -13,7 +13,7 @@ sketchesByBoz <- function() {
   txt.start <- "PREFACE"
   txt.stop <- "pleasure"
   start <- stri_locate_first_fixed(data_character, txt.start)[, "start"]
-  end <- stri_locate_last_fixed(data_character, txt.stop)[, "start"]
+  end <- stri_locate_last_fixed(data_character, txt.stop)[, "end"]
   stri_sub(data_character, start, end)
 }
 
