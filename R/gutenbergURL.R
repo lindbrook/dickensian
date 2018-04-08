@@ -5,7 +5,7 @@
 #' @return Character. URL as text string.
 #' @export
 
-gutenbergURL <-  function(id) {
+gutenbergURL <- function(id) {
   if (is.numeric(id) == FALSE) {
     stop('"id" must be numeric')
   }
