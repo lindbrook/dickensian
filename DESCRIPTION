@@ -2,7 +2,7 @@ Package: dickensian
 Type: Package
 Title: A Concordance of the Works of Charles Dickens
 Version: 0.0.9002
-Date: 2018-04-08
+Date: 2018-04-12
 Authors@R: person("lindbrook", email = "lindbrook@gmail.com",
     role = c("aut", "cre"))
 Description: Find words and terms in Dickens's corpus.
