@@ -4,14 +4,10 @@
 \alias{getWork}
 \title{Get Work.}
 \usage{
-getWork(id, first, last)
+getWork(id)
 }
 \arguments{
 \item{id}{Numeric. Gutenberg ID.}
-
-\item{first}{Character. First word.}
-
-\item{last}{Character. Last word.}
 }
 \value{
 quanteda object
@@ -21,8 +17,8 @@ Fetch work" from gutenberg.org for 'qunateda'.
 }
 \examples{
 # A Christmas Carol:
-getWork(46, "PREFACE", "One")
+getWork(46)
 
 # A Tale of Two Cities:
-getWork(98, "CONTENTS", "known")
+getWork(98)
 }

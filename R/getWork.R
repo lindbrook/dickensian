@@ -10,7 +10,7 @@ gutenbergURL <- function(id) {
     stop('"id" must be numeric')
   }
 
-  if (dickensian::bibliography[dickensian::bibliography$ID == id, "utf8"]) {
+  if (dickensian::bibliography[dickensian::bibliography$id == id, "utf8"]) {
     paste0("http://www.gutenberg.org/ebooks/", id, ".txt.utf-8")
   } else {
     paste0("http://www.gutenberg.org/files/", id, "/", id, "-0.txt")
@@ -21,47 +21,23 @@ gutenbergURL <- function(id) {
 #'
 #' Fetch work" from gutenberg.org for 'qunateda'.
 #' @param id Numeric. Gutenberg ID.
-#' @param first Character. First word.
-#' @param last Character. Last word.
 #' @return quanteda object
 #' @export
 #' @examples
 #' # A Christmas Carol:
-#' getWork(46, "PREFACE", "One")
+#' getWork(46)
 #'
 #' # A Tale of Two Cities:
-#' getWork(98, "CONTENTS", "known")
+#' getWork(98)
 
-getWork <- function(id, first, last) {
-  url <- dickensian::gutenbergURL(id)
-  data_character <- quanteda::texts(readtext::readtext(url))
-  start <- stringi::stri_locate_first_fixed(data_character, first)[, "start"]
-  end <- stringi::stri_locate_last_fixed(data_character, last)[, "end"]
-  stri_sub(data_character, start, end)
-}
-
-
-#' Get Work.
-#'
-#' Fetch work" from gutenberg.org for 'qunateda'.
-#' @param id Numeric. Gutenberg ID.
-#' @return quanteda object
-#' @export
-#' @examples
-#' # A Christmas Carol:
-#' getWork(46, "PREFACE", "One")
-#'
-#' # A Tale of Two Cities:
-#' getWork(98, "CONTENTS", "known")
-
-getWork2 <- function(id) {
+getWork <- function(id) {
   url <- dickensian::gutenbergURL(id)
   data_character <- quanteda::texts(readtext::readtext(url))
 
-  title <- dickensian::bibliography[dickensian::bibliography$ID == id, "gTitle"]
+  title <- dickensian::bibliography[dickensian::bibliography$id == id, "gTitle"]
   first <- paste0(toupper(title), "\n")
 
-  last <- dickensian::bibliography[dickensian::bibliography$ID == id,
+  last <- dickensian::bibliography[dickensian::bibliography$id == id,
     "last_word"]
 
   start <- stringi::stri_locate_first_fixed(data_character, first)[, "start"]
