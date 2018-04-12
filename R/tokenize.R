@@ -10,8 +10,8 @@ sketchesByBoz <- function() {
   url <- "http://www.gutenberg.org/files/882/882-0.txt"
   data_character <- texts(readtext::readtext(url))
   names(data_character) <- "boz"
-  txt.start <- "PREFACE"
-  txt.stop <- "pleasure"
+  txt.start <- "SKETCHES BY BOZ\n"
+  txt.stop <- "form.]"
   start <- stri_locate_first_fixed(data_character, txt.start)[, "start"]
   end <- stri_locate_last_fixed(data_character, txt.stop)[, "end"]
   stri_sub(data_character, start, end)
