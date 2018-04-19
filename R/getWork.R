@@ -42,5 +42,5 @@ getWork <- function(id) {
 
   start <- stringi::stri_locate_first_fixed(data_character, first)[, "start"]
   end <- stringi::stri_locate_last_fixed(data_character, last)[, "end"]
-  stri_sub(data_character, start, end)
+  stringi::stri_sub(data_character, start, end)
 }
