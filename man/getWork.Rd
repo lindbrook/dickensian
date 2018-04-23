@@ -2,23 +2,20 @@
 % Please edit documentation in R/getWork.R
 \name{getWork}
 \alias{getWork}
-\title{Get Work.}
+\title{Download work from gutenberg.org}
 \usage{
-getWork(id)
+getWork(id, g_title, last_text)
 }
 \arguments{
-\item{id}{Numeric. Gutenberg ID.}
+\item{id}{Numeric. Gutenberg ID of work.}
+
+\item{g_title}{Character. Start of text (gutenberg title).}
+
+\item{last_text}{Character. End of text (last word, include punctuation).}
 }
 \value{
-quanteda object
+quanteda object.
 }
 \description{
-Fetch work" from gutenberg.org for 'qunateda'.
-}
-\examples{
-# A Christmas Carol:
-getWork(46)
-
-# A Tale of Two Cities:
-getWork(98)
+Gets txt file.
 }
